@@ -25,7 +25,7 @@
 
 import requests
 
-from .exceptions import YargException, YargHTTPError
+from .exceptions import HTTPError
 from .package import json2package
 
 
@@ -44,11 +44,9 @@ def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
     """
     if not pypi_server.endswith("/"):
         pypi_server = pypi_server + "/"
-    try:
-        response = requests.get("{0}{1}/json".format(pypi_server,
-                                                     package_name))
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        if e.status_code == 404:
-            raise YargHTTPError(msg="404 Package not found")
+    response = requests.get("{0}{1}/json".format(pypi_server,
+                                                 package_name))
+    if response.status_code > 300:
+        raise HTTPError(status_code=response.status_code,
+                        reason=response.reason)
     return json2package(response.content)

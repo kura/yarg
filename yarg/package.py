@@ -67,7 +67,7 @@ class Package(object):
             >>> package.url
             u'https://pypi.python.org/pypi/yarg'
         """
-        return self._package['info']['url']
+        return self._package['package_url']
 
     @property
     def summary(self):
@@ -153,7 +153,7 @@ class Package(object):
             Maintainer(name=u'Kura', email=u'kura@kura.io')
         """
         maintainer = namedtuple('Maintainer', 'name email')
-        return author(name=self._package['maintainer'],
+        return maintainer(name=self._package['maintainer'],
                       email=self._package['maintainer_email'])
 
     @property

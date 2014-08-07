@@ -1,0 +1,94 @@
+{
+    "info": {
+        "maintainer": "Kura",
+        "docs_url": "http://yarg.readthedocs.org/",
+        "maintainer_email": "kura@kura.io",
+        "package_url": "http://pypi.python.org/pypi/yarg",
+        "author": "Kura",
+        "author_email": "kura@kura.io",
+        "download_url": "https://github.com/kura/yarg/archive/0.0.0.tar.gz",
+        "platform": "linux",
+        "version": "0.0.0",
+        "description": "This is the long description.",
+        "release_url": "http://pypi.python.org/pypi/yarg/0.0.0",
+        "downloads": {
+            "last_month": 510000,
+            "last_week": 72700,
+            "last_day": 34001
+        },
+        "classifiers": [
+            "Development Status :: 5 - Production/Stable",
+            "Intended Audience :: Developers",
+            "License :: OSI Approved :: MIT License",
+            "Programming Language :: Python",
+            "Programming Language :: Python :: 2.6",
+            "Programming Language :: Python :: 2.7",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.1",
+            "Programming Language :: Python :: 3.2",
+            "Programming Language :: Python :: 3.3",
+            "Programming Language :: Python :: Implementation :: CPython",
+            "Programming Language :: Python :: Implementation :: PyPy"
+        ],
+        "name": "yarg",
+        "bugtrack_url": "https://github.com/kura/yarg/issues",
+        "license": "MIT",
+        "summary": "This is the short summary.",
+        "home_page": "https://kura.io/yarg/"
+    },
+    "releases": {
+        "0.0.0": [
+            {
+                "has_sig": false,
+                "upload_time": "2014-08-16T12:21:20",
+                "comment_text": "",
+                "python_version": "2.7",
+                "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.0-py2.py3-none-any.whl",
+                "md5_digest": "3e3098612677c34706de2e10476b3e50",
+                "downloads": 742,
+                "filename": "yarg-0.0.0-py2.py3-none-any.whl",
+                "packagetype": "bdist_wheel",
+                "size": 21576
+            },
+            {
+                "has_sig": false,
+                "upload_time": "2014-08-16T12:21:49",
+                "comment_text": "",
+                "python_version": "source",
+                "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.0.tar.gz",
+                "md5_digest": "be198baa95536c1c9d17874428e3a0c6",
+                "downloads": 824,
+                "filename": "yarg-0.0.0.tar.gz",
+                "packagetype": "sdist",
+                "size": 12377
+            }
+        ],
+        "0.0.1": [],
+        "0.0.2": [
+            {
+                "has_sig": true,
+                "upload_time": "2014-07-21T19:41:20",
+                "comment_text": "",
+                "python_version": "2.7",
+                "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl",
+                "md5_digest": "3e3098611177c34706de2e10476b3e50",
+                "downloads": 749,
+                "filename": "yarg-0.0.2-py2.py3-none-any.whl",
+                "packagetype": "bdist_wheel",
+                "size": 21596
+            },
+            {
+                "has_sig": true,
+                "upload_time": "2014-07-21T19:40:55",
+                "comment_text": "",
+                "python_version": "source",
+                "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.2.tar.gz",
+                "md5_digest": "be198baa95116c1c9d17874428e3a0c6",
+                "downloads": 834,
+                "filename": "yarg-0.0.2.tar.gz",
+                "packagetype": "sdist",
+                "size": 12397
+            }
+        ]
+    }
+}

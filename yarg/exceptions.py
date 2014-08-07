@@ -30,7 +30,14 @@ class YargException(Exception):
     pass
 
 
-class YargHTTPError(YargException):
+class HTTPError(YargException, HTTPError):
 
     def __init__(self, *args, **kwargs):
-        self.msg = kwargs.pop('msg', None)
+        for key, val in kwargs.iteritems():
+            setattr(self, key, val)
+
+    def __str__(self):
+        return self.__repr__()
+
+    def __repr__(self):
+        return "{0} {1}".format(self.status_code, self.reason)
