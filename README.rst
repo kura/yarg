@@ -3,8 +3,6 @@ yarg(1) -- A semi hard Cornish cheese, also queries PyPI
 
 Yarg is a PyPI client.
 
-Usage:
-
 .. code-block:: python
 
     >>> import yarg
