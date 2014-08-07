@@ -1,5 +1,16 @@
-========================================================
 yarg(1) -- A semi hard Cornish cheese, also queries PyPI
 ========================================================
 
-Originally built for `pypip.in <https://pypip.in/>`_.
+Yarg is a PyPI client.
+
+Usage:
+
+    >>> import yarg
+    >>> package = yarg.get("yarg")
+    >>> package.name
+    u'yarg'
+    >>> package.author
+    Author(name=u'Kura', email=u'kura@kura.io')
+
+Full documentation is at <http://yarg.readthedocs.org>.
+"""
