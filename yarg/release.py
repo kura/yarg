@@ -23,19 +23,15 @@
 # SOFTWARE.
 
 
-import requests
+class Release(object):
 
-from .exceptions import YargException, YargHTTPError
-from .package import json2package
+    def __init__(self, release_id, pypi_dict):
+        self._release = pypi_dict
+        self._release['release_id'] = release_id
 
+    def __repr__(self):
+        return "<Release {0}>".format(self.release_id)
 
-def get(package, pypi="https://pypi.python.org/pypi/"):
-    if not pypi.endswith("/"):
-        pypi = pypip + "/"
-    try:
-        response = requests.get("{0}{1}/json".format(pypi, package))
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        if e.status_code == 404:
-            raise YargHTTPError(msg="404 Package not found")
-    return json2package(response.content)
+    @property
+    def release_id(self):
+        return self._release['release_id']
