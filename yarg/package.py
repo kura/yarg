@@ -49,60 +49,133 @@ class Package(object):
 
     @property
     def name(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.name
+            u'yarg'
+        """
         return self._package['name']
 
     @property
     def pypi_url(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.url
+            u'https://pypi.python.org/pypi/yarg'
+        """
         return self._package['info']['url']
 
     @property
     def summary(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.summary
+            u'Some random summary stufff'
+        """
         return self._package['summary']
 
     @property
     def description(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.description
+            u'A super long description, usually upload from the README'
+        """
         return self._package['description']
 
     @property
     def homepage(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.homepage
+            u'https://kura.io/yarg/'
+        """
         if self._package['home_page'] == "":
             return None
         return self._package['home_page']
 
     @property
     def bugtracker(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.bugtracker
+            u'https://github.com/kura/yarg/issues'
+        """
         if self._package['bugtrack_url'] == "":
             return None
         return self._package['bugtrack_url']
 
     @property
     def docs(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.docs
+            u'https://yarg.readthedocs.org/en/latest'
+        """
         if self._package['docs_url'] == "":
             return None
         return self._package['docs_url']
 
     @property
-    def version(self):
-        return self._package['version']
-
-    @property
     def author(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.author
+            Author(name=u'Kura', email=u'kura@kura.io')
+        """
         author = namedtuple('Author', 'name email')
         return author(name=self._package['author'],
                       email=self._package['author_email'])
 
     @property
     def maintainer(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.maintainer
+            Maintainer(name=u'Kura', email=u'kura@kura.io')
+        """
         maintainer = namedtuple('Maintainer', 'name email')
         return author(name=self._package['maintainer'],
                       email=self._package['maintainer_email'])
 
     @property
     def license(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.license
+            u'MIT'
+        """
         return self._package['license']
 
     @property
-    def license_from_classifier(self):
+    def license_from_classifiers(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.license_from_classifiers
+            u'MIT License'
+        """
         if len(self.classifiers) > 0:
             for c in self.classifiers:
                 if c.startswith("License"):
@@ -110,6 +183,13 @@ class Package(object):
 
     @property
     def downloads(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.downloads
+            Downloads(day=50100, week=367941, month=1601938)  # I wish
+        """
         _downloads = self._package['downloads']
         downloads = namedtuple('Downloads', 'day week month')
         return downloads(day=_downloads['last_day'],
@@ -118,25 +198,69 @@ class Package(object):
 
     @property
     def classifiers(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.classifiers
+            [u'License :: OSI Approved :: MIT License',
+             u'Programming Language :: Python :: 2.7',
+             u'Programming Language :: Python :: 3.4']
+        """
         return self._package['classifiers']
 
     @property
+    def latest_release_id(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.latest_release_id
+            u'0.1.0'
+        """
+        releases = self.release_ids
+        if len(releases) == 1:
+            return releases[0]
+        else:
+            return releases[-1]
+
+    @property
+    def latest_release(self):
+        """
+        A list of :class:`Release <Release>` objects for each file in the latest release.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.latest_release
+            [<Release 0.1.0>, <Release 0.1.0>]
+
+        """
+        release_id = self.latest_release_id
+        return self.release(release_id)
+
+    @property
     def release_ids(self):
+        """
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.release_ids
+            [u'0.0.1', u'0.0.5', u'0.1.0']
+        """
         r = [k for k in self._releases.keys() if len(self._releases[k]) > 0 ]
         return sorted(r)
 
     def release(self, release_id):
         """
-        A list of :class:`Release <Release>` objects for each file for a release.
+        A list of :class:`Release <Release>` objects for each file in a release.
 
         :param release_id: A pypi release id.
 
         Usage:
 
-            >>> import yarg
             >>> package = yarg.get('yarg')
             >>> last_release = yarg.releases[-1]
-            <Release 0.1.0>
             >>> package.release(last_release)
             [<Release 0.1.0>, <Release 0.1.0>]
         """
