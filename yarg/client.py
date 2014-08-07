@@ -1,7 +1,7 @@
 import requests
 
 from .exceptions import YargException, YargHTTPError
-from .package import json2object
+from .package import jsonpackage
 
 
 def get(package, pypi="https://pypi.python.org/pypi/"):
@@ -13,4 +13,4 @@ def get(package, pypi="https://pypi.python.org/pypi/"):
     except requests.exceptions.HTTPError as e:
         if e.status_code == 404:
             raise YargHTTPError(msg="404 Package not found")
-    return json2object(response.content)
+    return jsonpackage(response.content)

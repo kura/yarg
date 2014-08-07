@@ -113,5 +113,5 @@ class Release(object):
         return self._release['release_id']
 
 
-def json2object(json_content):
+def json2package(json_content):
     return Package(json.loads(json_content))
