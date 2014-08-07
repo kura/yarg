@@ -5,6 +5,8 @@ Yarg is a PyPI client.
 
 Usage:
 
+.. code-block:: python
+
     >>> import yarg
     >>> package = yarg.get("yarg")
     >>> package.name
