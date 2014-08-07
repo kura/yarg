@@ -13,4 +13,3 @@ Usage:
     Author(name=u'Kura', email=u'kura@kura.io')
 
 Full documentation is at <http://yarg.readthedocs.org>.
-"""
