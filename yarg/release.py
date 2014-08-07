@@ -23,7 +23,16 @@
 # SOFTWARE.
 
 
+from datetime import datetime
+
+
 class Release(object):
+    """
+    A release file from PyPI.
+
+    :param release_id: A release id.
+    :param pypi_dict: A dictionary of a release file.
+    """
 
     def __init__(self, release_id, pypi_dict):
         self._release = pypi_dict
@@ -35,3 +44,39 @@ class Release(object):
     @property
     def release_id(self):
         return self._release['release_id']
+
+    @property
+    def uploaded(self):
+        return datetime.strptime(self._release['upload_time'], '%Y-%m-%dT%H:%M:%S')
+
+    @property
+    def python_version(self):
+        return self._release['python_version']
+
+    @property
+    def url(self):
+        return self._release['url']
+
+    @property
+    def md5_digest(self):
+        return self._release['md5_digest']
+
+    @property
+    def filename(self):
+        return self._release['filename']
+
+    @property
+    def size(self):
+        return self._release['size']
+
+    @property
+    def package_type(self):
+        mapping = {'bdist_egg': 'egg', 'bdist_wheel': 'wheel', 'sdist': 'source'}
+        ptype = self._release['packagetype']
+        if ptype in mapping.keys():
+            return mapping[ptype]
+        return ptype
+
+    @property
+    def has_sig(self):
+        return self._release['has_sig']

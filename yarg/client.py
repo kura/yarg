@@ -29,11 +29,24 @@ from .exceptions import YargException, YargHTTPError
 from .package import json2package
 
 
-def get(package, pypi="https://pypi.python.org/pypi/"):
-    if not pypi.endswith("/"):
-        pypi = pypip + "/"
+def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
+    """
+    Constructs a request to the PyPI server and returns a :class:`Package <Package>`.
+
+    :param package_name: case sensitive name of the package on the PyPI server.
+    :param pypi_server: (option) URL to the PyPI server.
+
+    Usage:
+
+        >>> import yarg
+        >>> package = yarg.get('yarg')
+        <Package yarg>
+    """
+    if not pypi_server.endswith("/"):
+        pypi_server = pypi_server + "/"
     try:
-        response = requests.get("{0}{1}/json".format(pypi, package))
+        response = requests.get("{0}{1}/json".format(pypi_server,
+                                                     package_name))
         response.raise_for_status()
     except requests.exceptions.HTTPError as e:
         if e.status_code == 404:

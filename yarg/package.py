@@ -34,6 +34,11 @@ from .release import Release
 
 
 class Package(object):
+    """
+    A PyPI package.
+
+    :param pypi_dict: A dictionary retrieved from the PyPI server.
+    """
 
     def __init__(self, pypi_dict):
         self._package = pypi_dict['info']
@@ -121,10 +126,29 @@ class Package(object):
         return sorted(r)
 
     def release(self, release_id):
+        """
+        A list of :class:`Release <Release>` objects for each file for a release.
+
+        :param release_id: A pypi release id.
+
+        Usage:
+
+            >>> import yarg
+            >>> package = yarg.get('yarg')
+            >>> last_release = yarg.releases[-1]
+            <Release 0.1.0>
+            >>> package.release(last_release)
+            [<Release 0.1.0>, <Release 0.1.0>]
+        """
         if release_id not in self.release_ids:
             raise
-        return [Release(r, self._releases[r]) for r in self.release_ids]
+        return [Release(release_id, r) for r in self._releases[release_id]]
 
 
 def json2package(json_content):
+    """
+    Returns a :class:`Package <Package>` object from JSON content from the PyPI server.
+
+    :param json_content: JSON encoded content from the PyPI server.
+    """
     return Package(json.loads(json_content))
