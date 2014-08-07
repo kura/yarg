@@ -7,7 +7,7 @@ python:
   - "3.4"
   - "pypy"
 install:
-  - pip install nosetests coveralls
+  - pip install nose coveralls
 script:
   - python runtests.py
 after_success:
