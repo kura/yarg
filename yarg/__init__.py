@@ -47,7 +47,7 @@ from .package import json2package
 __all__ = ['get', 'HTTPError', 'json2package']
 
 __title__ = 'yarg'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __author__ = 'Kura'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2014 Kura'
