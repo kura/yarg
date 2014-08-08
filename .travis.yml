@@ -10,6 +10,6 @@ install:
   - make deps
   - make deps-test
 script:
-  - make test
+  - coverage run --source=yarg runtest.py
 after_success:
   - coveralls
