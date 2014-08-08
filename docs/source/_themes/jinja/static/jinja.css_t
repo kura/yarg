@@ -6,14 +6,40 @@
  * :license: Flask Design License, see LICENSE for details.
  */
 
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
-
 {% set page_width = '940px' %}
 {% set sidebar_width = '220px' %}
-{% set font_family = 'Georgia, serif' %}
-{% set header_font_family = 'Crimson Text, ' ~ font_family %}
+{% set font_family = 'FiraSans, Georgia, serif' %}
+{% set header_font_family = 'FiraSans, Georgia, serif' %}
 
 @import url("basic.css");
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FiraSans'), local('FiraSans-Regular'), url(FiraSans-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('FiraSans SemiBold'), local('FiraSans-SemiBold'), url(FiraSans-SemiBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('FiraSans Bold'), local('FiraSans-Bold'), url(FiraSans-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraMono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FiraMono'), local('FiraMono-Regular'), url(FiraMono-Regular.woff) format('woff');
+}
 
 /* -- page layout ----------------------------------------------------------- */
 
@@ -165,7 +191,7 @@ div.body h4,
 div.body h5,
 div.body h6 {
     font-family: {{ header_font_family }};
-    font-weight: normal;
+    font-weight: 600;
     margin: 30px 0px 10px 0px;
     padding: 0;
     color: black;
@@ -254,7 +280,7 @@ p.admonition-title:after {
 }
 
 pre, tt {
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: 'FiraMono', monospace;
     font-size: 0.85em;
 }
 
@@ -373,22 +399,12 @@ tt.xref, a tt {
 
 a.reference {
     text-decoration: none;
-    border-bottom: 1px dotted #bb0000;
-}
-
-a.reference:hover {
-    border-bottom: 1px solid #dd0000;
 }
 
 a.footnote-reference {
     text-decoration: none;
     font-size: 0.7em;
     vertical-align: top;
-    border-bottom: 1px dotted #bb0000;
-}
-
-a.footnote-reference:hover {
-    border-bottom: 1px solid #dd0000;
 }
 
 a:hover tt {
