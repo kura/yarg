@@ -10,7 +10,6 @@ version = __import__('yarg').__version__
 setup(name='yarg',
       version=version,
       url="https://yarg.readthedocs.org/",
-      bugtrack_url="https:/github.com/kura/yarg/issues",
       home_page="https://yarg.readthedocs.org/",
       author="Kura",
       author_email="kura@kura.io",
