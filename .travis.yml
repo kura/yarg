@@ -5,6 +5,7 @@ python:
   - "3.3"
   - "3.4"
   - "pypy"
+  - "pyp3"
 install:
   - pip install nose coveralls requests
 script:
