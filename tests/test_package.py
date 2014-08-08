@@ -102,7 +102,7 @@ class TestPackage(unittest.TestCase):
                           self.package.python_implementations)
 
 
-class TestPackage(unittest.TestCase):
+class TestPackageMissingData(unittest.TestCase):
 
     def setUp(self):
         package = os.path.join(os.path.dirname(__file__),
