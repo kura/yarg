@@ -35,7 +35,7 @@ Yarg is a PyPI client.
     >>> package.author
     Author(name=u'Kura', email=u'kura@kura.io')
 
-Full documentation is at <http://yarg.readthedocs.org>.
+Full documentation is at <https://yarg.readthedocs.org>.
 """
 
 
