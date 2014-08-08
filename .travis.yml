@@ -7,8 +7,9 @@ python:
   - "pypy"
   - "pypy3"
 install:
-  - pip install nose coveralls requests
+  - make deps
+  - make deps-test
 script:
-  - python runtests.py
+  - make test
 after_success:
   - coveralls
