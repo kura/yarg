@@ -23,14 +23,14 @@
 # SOFTWARE.
 
 
-from requests.exceptions import HTTPError
+from requests.exceptions import HTTPError as RHTTPError
 
 
 class YargException(Exception):
     pass
 
 
-class HTTPError(YargException, HTTPError):
+class HTTPError(YargException, RHTTPError):
     """
     A catchall HTTPError exception to handle HTTP errors
     when using :meth:`yarg.get`.
@@ -40,7 +40,7 @@ class HTTPError(YargException, HTTPError):
     """
 
     def __init__(self, *args, **kwargs):
-        for key, val in kwargs.iteritems():
+        for key, val in kwargs.items():
             setattr(self, key, val)
 
     def __str__(self):

@@ -100,7 +100,8 @@ class Package(object):
             >>> package.homepage
             u'https://kura.io/yarg/'
         """
-        if self._package['home_page'] == "":
+        if 'home_page' not in self._package or \
+        self._package['home_page'] == "":
             return None
         return self._package['home_page']
 
@@ -113,7 +114,8 @@ class Package(object):
             >>> package.bugtracker
             u'https://github.com/kura/yarg/issues'
         """
-        if self._package['bugtrack_url'] == "":
+        if 'bugtrack_url' not in self._package or \
+        self._package['bugtrack_url'] == "":
             return None
         return self._package['bugtrack_url']
 
@@ -126,7 +128,8 @@ class Package(object):
             >>> package.docs
             u'https://yarg.readthedocs.org/en/latest'
         """
-        if self._package['docs_url'] == "":
+        if 'docs_url' not in self._package or \
+        self._package['docs_url'] == "":
             return None
         return self._package['docs_url']
 

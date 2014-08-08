@@ -37,6 +37,11 @@ class TestRelease(unittest.TestCase):
         release = self.package.release(release_id)[0]
         self.assertEquals(release_id, release.release_id)
 
+    def test_release_id(self):
+        release_id = '0.0.3'
+        release = self.package.release(release_id)
+        self.assertEquals(None, release)
+
     def test_release_uploaded(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
@@ -55,7 +60,7 @@ class TestRelease(unittest.TestCase):
         url = u'https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl'
         self.assertEquals(url, release.url)
 
-    def test_release_url(self):
+    def test_release_md5(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
         md5 = u'3e3098611177c34706de2e10476b3e50'
@@ -72,6 +77,11 @@ class TestRelease(unittest.TestCase):
         release = self.package.release(release_id)[0]
         size = 21596
         self.assertEquals(size, release.size)
+
+    def test_release_unknown_package_type(self):
+        release_id = '0.0.0'
+        release = self.package.release(release_id)[0]
+        self.assertEquals(u'wheeeel', release.package_type)
 
     def test_release_package_type(self):
         release_id = '0.0.2'

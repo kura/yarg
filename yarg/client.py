@@ -47,7 +47,7 @@ def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
         pypi_server = pypi_server + "/"
     response = requests.get("{0}{1}/json".format(pypi_server,
                                                  package_name))
-    if response.status_code > 300:
+    if response.status_code >= 300:
         raise HTTPError(status_code=response.status_code,
                         reason=response.reason)
     return json2package(response.content)

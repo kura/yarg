@@ -100,3 +100,25 @@ class TestPackage(unittest.TestCase):
     def test_python_implementations(self):
         self.assertEquals([u'CPython', u'PyPy'],
                           self.package.python_implementations)
+
+
+class TestPackage(unittest.TestCase):
+
+    def setUp(self):
+        package = os.path.join(os.path.dirname(__file__),
+                               'package_no_homepage_bugtrack_one_release.json')
+        self.json = json.loads(open(package).read())
+        self.package = json2package(open(package).read())
+
+
+    def test_homepage(self):
+        self.assertEquals(None, self.package.homepage)
+
+    def test_bugtracker(self):
+        self.assertEquals(None, self.package.bugtracker)
+
+    def test_docs(self):
+        self.assertEquals(None, self.package.docs)
+
+    def test_latest_release_id(self):
+        self.assertEquals(u'0.0.0', self.package.latest_release_id)

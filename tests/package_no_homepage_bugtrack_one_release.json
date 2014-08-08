@@ -1,7 +1,6 @@
 {
     "info": {
         "maintainer": "Kura",
-        "docs_url": "http://yarg.readthedocs.org/",
         "maintainer_email": "kura@kura.io",
         "package_url": "http://pypi.python.org/pypi/yarg",
         "author": "Kura",
@@ -31,10 +30,8 @@
             "Programming Language :: Python :: Implementation :: PyPy"
         ],
         "name": "yarg",
-        "bugtrack_url": "https://github.com/kura/yarg/issues",
         "license": "MIT",
-        "summary": "This is the short summary.",
-        "home_page": "https://kura.io/yarg/"
+        "summary": "This is the short summary."
     },
     "releases": {
         "0.0.0": [
@@ -59,35 +56,8 @@
                 "md5_digest": "be198baa95536c1c9d17874428e3a0c6",
                 "downloads": 824,
                 "filename": "yarg-0.0.0.tar.gz",
-                "packagetype": "egg",
+                "packagetype": "soooource",
                 "size": 12377
-            }
-        ],
-        "0.0.1": [],
-        "0.0.2": [
-            {
-                "has_sig": true,
-                "upload_time": "2014-07-21T19:41:20",
-                "comment_text": "",
-                "python_version": "2.7",
-                "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl",
-                "md5_digest": "3e3098611177c34706de2e10476b3e50",
-                "downloads": 749,
-                "filename": "yarg-0.0.2-py2.py3-none-any.whl",
-                "packagetype": "bdist_wheel",
-                "size": 21596
-            },
-            {
-                "has_sig": true,
-                "upload_time": "2014-07-21T19:40:55",
-                "comment_text": "",
-                "python_version": "source",
-                "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.2.tar.gz",
-                "md5_digest": "be198baa95116c1c9d17874428e3a0c6",
-                "downloads": 834,
-                "filename": "yarg-0.0.2.tar.gz",
-                "packagetype": "sdist",
-                "size": 12397
             }
         ]
     }
