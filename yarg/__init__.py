@@ -45,7 +45,7 @@ from .client import get
 __all__ = ['get', ]
 
 __title__ = 'yarg'
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 __author__ = 'Kura'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2014 Kura'
