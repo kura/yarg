@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'yarg'
-copyright = u'{0}, Kura'.format(datetime.datetime.now().year
+copyright = u'{0}, Kura'.format(datetime.datetime.now().year)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -192,7 +192,7 @@ htmlhelp_basename = 'yargdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-# latex_elements = {
+latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
 
@@ -201,15 +201,15 @@ htmlhelp_basename = 'yargdoc'
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
-# }
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-# latex_documents = [
-#   ('index', 'yarg.tex', u'yarg Documentation',
-#    u'Kura', 'manual'),
-# ]
+latex_documents = [
+  ('index', 'yarg.tex', u'yarg Documentation',
+   u'Kura', 'manual'),
+]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -250,11 +250,11 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-# texinfo_documents = [
-#   ('index', 'yarg', u'yarg Documentation',
-#    u'Kura', 'yarg', 'One line description of project.',
-#    'Miscellaneous'),
-# ]
+texinfo_documents = [
+  ('index', 'yarg', u'yarg Documentation',
+   u'Kura', 'yarg', 'One line description of project.',
+   'Miscellaneous'),
+]
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
