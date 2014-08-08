@@ -43,3 +43,11 @@ Yarg documentation
 
    intro
    api
+
+Help
+----
+
+.. toctree::
+    :maxdepth: 2
+
+    faq
