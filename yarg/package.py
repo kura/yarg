@@ -265,7 +265,7 @@ class Package(object):
             [<Release 0.1.0>, <Release 0.1.0>]
         """
         if release_id not in self.release_ids:
-            raise
+            return None
         return [Release(release_id, r) for r in self._releases[release_id]]
 
 

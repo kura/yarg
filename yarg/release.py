@@ -146,7 +146,7 @@ class Release(object):
         mapping = {'bdist_egg': 'egg', 'bdist_wheel': 'wheel', 'sdist': 'source'}
         ptype = self._release['packagetype']
         if ptype in mapping.keys():
-            return mapping[ptype]
+            return unicode(mapping[ptype])
         return ptype
 
     @property
