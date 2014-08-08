@@ -1,9 +1,9 @@
 yarg(1) -- A semi hard Cornish cheese, also queries PyPI
 ========================================================
 
-.. image:: http://img.shields.io/travis/kura/yarg.svg?style=flat
+.. image:: https://img.shields.io/travis/kura/yarg.svg?style=flat
 
-.. image:: http://img.shields.io/coveralls/kura/yarg.svg?style=flat
+.. image:: https://img.shields.io/coveralls/kura/yarg.svg?style=flat
 
 .. image:: https://pypip.in/version/yarg/badge.svg?style=flat
 
