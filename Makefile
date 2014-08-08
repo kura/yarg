@@ -30,6 +30,7 @@ pypi:
 	python setup.py register
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
+	curl -X POST https://readthedocs.org/build/yarg
 
 test:
 	nosetests
