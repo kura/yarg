@@ -8,7 +8,7 @@ Bug fixes
 ~~~~~~~~~
 
 - `yarg.get` will now raise an Exception for errors **including**
-  300 and above. Previously on raised for above 300.
+  300 and above. Previously only raised for above 300.
 - Fix an issue on Python 3.X and PyPy3 where `HTTPError` was using
   a method that was removed in Python 3.
 - Added dictionary key lookups for `home_page`, `bugtrack_url`
