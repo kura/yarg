@@ -44,6 +44,22 @@ Yarg documentation
    intro
    api
 
+Changelog
+---------
+
+.. toctree::
+    :maxdepth: 2
+
+    changelog
+
+Contributors
+------------
+
+.. toctree::
+    :maxdepth: 2
+
+    contributors.rst
+
 Help
 ----
 

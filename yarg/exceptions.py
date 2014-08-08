@@ -31,6 +31,13 @@ class YargException(Exception):
 
 
 class HTTPError(YargException, HTTPError):
+    """
+    A catchall HTTPError exception to handle HTTP errors
+    when using :meth:`yarg.get`.
+
+    This exception is also loaded at :class:`yarg.HTTPError`
+    for ease of access.
+    """
 
     def __init__(self, *args, **kwargs):
         for key, val in kwargs.iteritems():

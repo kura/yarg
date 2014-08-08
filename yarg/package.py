@@ -27,8 +27,8 @@ try:
     import simplejson as json
 except ImportError:
     import json
-
 from collections import namedtuple
+import re
 
 from .release import Release
 
@@ -210,6 +210,37 @@ class Package(object):
         return self._package['classifiers']
 
     @property
+    def python_versions(self):
+        """
+        Returns a list of Python version strings that
+        the package has listed in :attr:`Release.classifiers`.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.python_versions
+            [u'2.6', u'2.7', u'3.3', u'3.4']
+        """
+        version_re = re.compile(r"Programming Language \:\: Python \:\: \d\.\d")
+        return [c.split(' :: ')[-1] for c in self.classifiers
+                if version_re.match(c)]
+
+    @property
+    def python_implementations(self):
+        """
+        Returns a list of Python implementation strings that
+        the package has listed in :attr:`Release.classifiers`.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.python_implementations
+            [u'CPython', u'PyPy']
+        """
+        return [c.split(' :: ')[-1] for c in self.classifiers
+                if c.startswith('Programming Language :: Python :: Implementation')]
+
+    @property
     def latest_release_id(self):
         """
         Usage:
@@ -235,10 +266,63 @@ class Package(object):
             >>> package = yarg.get('yarg')
             >>> package.latest_release
             [<Release 0.1.0>, <Release 0.1.0>]
-
         """
         release_id = self.latest_release_id
         return self.release(release_id)
+
+    @property
+    def has_wheel(self):
+        """
+        Returns `True` if one of the :class:`Release <Release>` objects
+        in the latest set of release files is `wheel` format. Returns
+        `False` if not.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.has_wheel
+            True
+        """
+        for release in self.latest_release:
+            if release.package_type in ('wheel', 'bdist_wheel'):
+                return True
+        return False
+
+    @property
+    def has_egg(self):
+        """
+        Returns `True` if one of the :class:`Release <Release>` objects
+        in the latest set of release files is `egg` format. Returns
+        `False` if not.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.has_egg
+            False
+        """
+        for release in self.latest_release:
+            if release.package_type in ('egg', 'bdist_egg'):
+                return True
+        return False
+
+    @property
+    def has_source(self):
+        """
+        Returns `True` if one of the :class:`Release <Release>` objects
+        in the latest set of release files is `source` format. Returns
+        `False` if not.
+
+        Usage:
+
+            >>> package = yarg.get('yarg')
+            >>> package.has_source
+            True
+        """
+        for release in self.latest_release:
+            if release.package_type in ('source', 'sdist'):
+                return True
+        return False
 
     @property
     def release_ids(self):

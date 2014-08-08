@@ -90,7 +90,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.url
-            u'https://pypi.python.org/packages/2.7/y/yarg/yarg-0.1.0-py27-none-any.whl'
+            u'https://pypi.python.org/packages/2.7/y/yarg/yarg...'
         """
         return self._release['url']
 

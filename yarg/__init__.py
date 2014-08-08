@@ -40,12 +40,14 @@ Full documentation is at <https://yarg.readthedocs.org>.
 
 
 from .client import get
+from .exceptions import HTTPError
+from .package import json2package
 
 
-__all__ = ['get', ]
+__all__ = ['get', 'HTTPError', 'json2package']
 
 __title__ = 'yarg'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __author__ = 'Kura'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2014 Kura'
