@@ -154,7 +154,7 @@ class Package(object):
         """
         maintainer = namedtuple('Maintainer', 'name email')
         return maintainer(name=self._package['maintainer'],
-                      email=self._package['maintainer_email'])
+                          email=self._package['maintainer_email'])
 
     @property
     def license(self):
@@ -227,7 +227,8 @@ class Package(object):
     @property
     def latest_release(self):
         """
-        A list of :class:`Release <Release>` objects for each file in the latest release.
+        A list of :class:`Release <Release>` objects for each file in the
+        latest release.
 
         Usage:
 
@@ -248,12 +249,13 @@ class Package(object):
             >>> package.release_ids
             [u'0.0.1', u'0.0.5', u'0.1.0']
         """
-        r = [k for k in self._releases.keys() if len(self._releases[k]) > 0 ]
+        r = [k for k in self._releases.keys() if len(self._releases[k]) > 0]
         return sorted(r)
 
     def release(self, release_id):
         """
-        A list of :class:`Release <Release>` objects for each file in a release.
+        A list of :class:`Release <Release>` objects for each file in a
+        release.
 
         :param release_id: A pypi release id.
 
@@ -271,7 +273,8 @@ class Package(object):
 
 def json2package(json_content):
     """
-    Returns a :class:`Package <Package>` object from JSON content from the PyPI server.
+    Returns a :class:`Package <Package>` object from JSON content from the
+    PyPI server.
 
     :param json_content: JSON encoded content from the PyPI server.
     """

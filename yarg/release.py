@@ -65,7 +65,8 @@ class Release(object):
             >>> r.uploaded
             datetime.datime(2014, 8, 7, 21, 26, 19)
         """
-        return datetime.strptime(self._release['upload_time'], '%Y-%m-%dT%H:%M:%S')
+        return datetime.strptime(self._release['upload_time'],
+                                 '%Y-%m-%dT%H:%M:%S')
 
     @property
     def python_version(self):

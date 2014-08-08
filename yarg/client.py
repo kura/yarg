@@ -31,7 +31,8 @@ from .package import json2package
 
 def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
     """
-    Constructs a request to the PyPI server and returns a :class:`Package <Package>`.
+    Constructs a request to the PyPI server and returns a
+    :class:`Package <Package>`.
 
     :param package_name: case sensitive name of the package on the PyPI server.
     :param pypi_server: (option) URL to the PyPI server.
