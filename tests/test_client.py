@@ -27,6 +27,8 @@ class TestClient(unittest.TestCase):
             get("test")
         except HTTPError as e:
             self.assertEqual(300, e.status_code)
+            self.assertEqual(e.status_code, e.errno)
+            self.assertEqual(e.reason, e.message)
 
     @patch('requests.get', return_value=GoodResponse)
     def test_end_slash(self, get_mock):

@@ -42,6 +42,10 @@ class HTTPError(YargException, RHTTPError):
     def __init__(self, *args, **kwargs):
         for key, val in kwargs.items():
             setattr(self, key, val)
+        if hasattr(self, 'status_code'):
+            setattr(self, 'errno', self.status_code)
+        if hasattr(self, 'reason'):
+            setattr(self, 'message', self.reason)
 
     def __str__(self):
         return self.__repr__()
