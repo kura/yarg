@@ -44,7 +44,7 @@
                 "md5_digest": "3e3098612677c34706de2e10476b3e50",
                 "downloads": 742,
                 "filename": "yarg-0.0.0-py2.py3-none-any.whl",
-                "packagetype": "wheeeel",
+                "packagetype": "bdist_egg",
                 "size": 21576
             },
             {
