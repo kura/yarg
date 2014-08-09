@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="0.91">
+ <channel>
+  <title>PyPI Recent Updates</title>
+  <link>https://pypi.python.org/pypi</link>
+  <description>Recent updates to the Python Package Index</description>
+  <language>en</language>
+  <item>
+    <title>pycoin 0.50</title>
+    <link>http://pypi.python.org/pypi/pycoin/0.50</link>
+    <description>Utilities for Bitcoin and altcoin addresses and transaction manipulation.</description>
+    <pubDate>09 Aug 2014 08:40:20 GMT</pubDate>
+   </item>
+  <item>
+    <title>django-signup 0.6.0</title>
+    <link>http://pypi.python.org/pypi/django-signup/0.6.0</link>
+    <description>A user registration app for Django with support for custom user models</description>
+    <pubDate>09 Aug 2014 08:33:53 GMT</pubDate>
+   </item>
+  <item>
+    <title>pyADC 0.1.3</title>
+    <link>http://pypi.python.org/pypi/pyADC/0.1.3</link>
+    <description>Python implementation of the ADC(S) Protocol for Direct Connect.</description>
+    <pubDate>09 Aug 2014 08:19:56 GMT</pubDate>
+   </item>
+  </channel>
+</rss>

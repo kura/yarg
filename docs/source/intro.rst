@@ -30,6 +30,9 @@ From the tarball release
 Getting started
 ---------------
 
+Search interface
+~~~~~~~~~~~~~~~~
+
 .. code-block:: python
 
     >>> import yarg
@@ -39,4 +42,40 @@ Getting started
     >>> package.author
     Author(name=u'Kura', email=u'kura@kura.io')
 
-:meth:`~yarg.get` returns an instance of :class:`~yarg.package.Package`.
+:meth:`yarg.get` returns an instance of :class:`yarg.package.Package`.
+
+Newest packages interface
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    >>> import yarg
+    >>> packages = yarg.newest_packages()
+    >>> packages
+    [<Package yarg>, <Package gray>, <Package ragy>]
+    >>> packages[0].name
+    u'yarg'
+    >>> packages.url
+    u'http://pypi.python.org/pypi/yarg
+
+:meth:`yarg.newest_packages` returns a list of :class:`yarg.parse.Package`
+objects.
+
+Updated packages interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    >>> import yarg
+    >>> packages = yarg.latest_updated_packages()
+    >>> packages
+    [<Package yarg>, <Package gray>, <Package ragy>]
+    >>> packages[0].name
+    u'yarg'
+    >>> packages[0].version
+    u'0.1.2'
+    >>> packages[0].url
+    u'http://pypi.python.org/pypi/yarg/0.1.2
+
+:meth:`yarg.latest_updated_packages` returns a list of :class:`yarg.parse.Package`
+objects.

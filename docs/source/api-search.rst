@@ -1,5 +1,5 @@
-API
-===
+API - Package Lookup
+====================
 
 .. module:: yarg
 

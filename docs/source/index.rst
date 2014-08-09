@@ -42,7 +42,8 @@ Yarg documentation
    :maxdepth: 2
 
    intro
-   api
+   api-search
+   api-rss
 
 Changelog
 ---------

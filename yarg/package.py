@@ -76,7 +76,7 @@ class Package(object):
 
             >>> package = yarg.get('yarg')
             >>> package.summary
-            u'Some random summary stufff'
+            u'Some random summary stuff'
         """
         return self._package['summary']
 
@@ -216,7 +216,7 @@ class Package(object):
     def python_versions(self):
         """
         Returns a list of Python version strings that
-        the package has listed in :attr:`Release.classifiers`.
+        the package has listed in :attr:`yarg.Release.classifiers`.
 
         Usage:
 
@@ -232,7 +232,7 @@ class Package(object):
     def python_implementations(self):
         """
         Returns a list of Python implementation strings that
-        the package has listed in :attr:`Release.classifiers`.
+        the package has listed in :attr:`yarg.Release.classifiers`.
 
         Usage:
 
@@ -261,7 +261,7 @@ class Package(object):
     @property
     def latest_release(self):
         """
-        A list of :class:`Release <Release>` objects for each file in the
+        A list of :class:`yarg.release.Release` objects for each file in the
         latest release.
 
         Usage:
@@ -276,7 +276,7 @@ class Package(object):
     @property
     def has_wheel(self):
         """
-        Returns `True` if one of the :class:`Release <Release>` objects
+        Returns `True` if one of the :class:`yarg.release.Release` objects
         in the latest set of release files is `wheel` format. Returns
         `False` if not.
 
@@ -294,7 +294,7 @@ class Package(object):
     @property
     def has_egg(self):
         """
-        Returns `True` if one of the :class:`Release <Release>` objects
+        Returns `True` if one of the :class:`yarg.release.Release` objects
         in the latest set of release files is `egg` format. Returns
         `False` if not.
 
@@ -312,7 +312,7 @@ class Package(object):
     @property
     def has_source(self):
         """
-        Returns `True` if one of the :class:`Release <Release>` objects
+        Returns `True` if one of the :class:`yarg.release.Release` objects
         in the latest set of release files is `source` format. Returns
         `False` if not.
 
@@ -341,7 +341,7 @@ class Package(object):
 
     def release(self, release_id):
         """
-        A list of :class:`Release <Release>` objects for each file in a
+        A list of :class:`yarg.release.Release` objects for each file in a
         release.
 
         :param release_id: A pypi release id.
@@ -360,7 +360,7 @@ class Package(object):
 
 def json2package(json_content):
     """
-    Returns a :class:`Package <Package>` object from JSON content from the
+    Returns a :class:`yarg.release.Release` object from JSON content from the
     PyPI server.
 
     :param json_content: JSON encoded content from the PyPI server.

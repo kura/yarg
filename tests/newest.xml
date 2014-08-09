@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="0.91">
+ <channel>
+  <title>PyPI Newest Packages</title>
+  <link>https://pypi.python.org/pypi</link>
+  <description>Newest packages registered at the Python Package Index</description>
+  <language>en</language>
+  <item>
+    <title>gobble added to PyPI</title>
+    <link>http://pypi.python.org/pypi/gobble</link>
+    <guid>http://pypi.python.org/pypi/gobble</guid>
+    <description>Automatic functional testing for CLI apps.</description>
+    <pubDate>09 Aug 2014 06:57:42 GMT</pubDate>
+   </item>
+  <item>
+    <title>flask_autorest added to PyPI</title>
+    <link>http://pypi.python.org/pypi/flask_autorest</link>
+    <guid>http://pypi.python.org/pypi/flask_autorest</guid>
+    <description>auto create restful apis for database, with the help of dataset.</description>
+    <pubDate>09 Aug 2014 05:24:58 GMT</pubDate>
+   </item>
+  <item>
+    <title>ranrod added to PyPI</title>
+    <link>http://pypi.python.org/pypi/ranrod</link>
+    <guid>http://pypi.python.org/pypi/ranrod</guid>
+    <description>download route53 hosted zones as local json files</description>
+    <pubDate>09 Aug 2014 05:20:21 GMT</pubDate>
+   </item>
+  </channel>
+</rss>
