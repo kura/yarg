@@ -32,6 +32,11 @@ class TestRelease(unittest.TestCase):
         self.assertEquals('be198baa95116c1c9d17874428e3a0c6',
                           self.package.release(release_id)[1].md5_digest)
 
+    def test_repr(self):
+        release_id = '0.0.2'
+        release = self.package.release(release_id)[0]
+        self.assertEquals(u'<Release 0.0.2>', release.__repr__())
+
     def test_release_id(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]

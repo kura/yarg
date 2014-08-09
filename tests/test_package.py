@@ -14,6 +14,9 @@ class TestPackage(unittest.TestCase):
         self.json = json.loads(open(package).read())
         self.package = json2package(open(package).read())
 
+    def test_repr(self):
+        self.assertEquals(u'<Package yarg>', self.package.__repr__())
+
     def test_name(self):
         self.assertEquals(u'yarg', self.package.name)
 

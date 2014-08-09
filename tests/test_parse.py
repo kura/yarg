@@ -108,6 +108,20 @@ class TestClient(unittest.TestCase):
                                            "%d %b %Y %H:%M:%S %Z"),
                          p[0].date)
 
+    @patch('requests.get', return_value=GoodNewestResponse)
+    def test_newest_package_repr(self, get_mock):
+        p = newest_packages()
+        self.assertEqual(call('https://pypi.python.org/pypi?%3Aaction=packages_rss'),
+                         get_mock.call_args)
+        self.assertEqual('<Package gobble>', p[0].__repr__())
+
+    @patch('requests.get', return_value=GoodNewestResponse)
+    def test_newest_package_version(self, get_mock):
+        p = newest_packages()
+        self.assertEqual(call('https://pypi.python.org/pypi?%3Aaction=packages_rss'),
+                get_mock.call_args)
+        self.assertEqual(None, p[0].version)
+
     @patch('requests.get', return_value=GoodUpdatedResponse)
     def test_updated_packages(self, get_mock):
         p = latest_updated_packages()
@@ -121,7 +135,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(self.updated[2].version, p[2].version)
 
     @patch('requests.get', return_value=GoodUpdatedResponse)
-    def test_newest_package(self, get_mock):
+    def test_updated_package(self, get_mock):
         p = latest_updated_packages()
         self.assertEqual(call('https://pypi.python.org/pypi?%3Aaction=rss'),
                          get_mock.call_args)
@@ -133,3 +147,10 @@ class TestClient(unittest.TestCase):
         self.assertEqual(datetime.strptime('09 Aug 2014 08:40:20 GMT',
                                            "%d %b %Y %H:%M:%S %Z"),
                          p[0].date)
+
+    @patch('requests.get', return_value=GoodUpdatedResponse)
+    def test_updated_package_repr(self, get_mock):
+        p = latest_updated_packages()
+        self.assertEqual(call('https://pypi.python.org/pypi?%3Aaction=rss'),
+                         get_mock.call_args)
+        self.assertEqual('<Package pycoin>', p[0].__repr__())
