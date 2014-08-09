@@ -10,8 +10,8 @@ Query Interface
 
 .. autofunction:: latest_updated_packages
 
-Package Interface
------------------
+Package Object
+--------------
 
 .. autoclass:: yarg.parse.Package
    :inherited-members:

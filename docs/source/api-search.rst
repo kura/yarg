@@ -8,15 +8,15 @@ Query Interface
 
 .. autofunction:: get
 
-Package Interface
------------------
+Package Object
+--------------
 
 .. autoclass:: yarg.package.Package
    :inherited-members:
    :member-order: bysource
 
-Release Interface
------------------
+Release Object
+--------------
 
 .. autoclass:: yarg.release.Release
    :inherited-members:
