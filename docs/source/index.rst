@@ -35,6 +35,14 @@ easy to use and makes sense.
     >>> package.author
     Author(name=u'Kura', email=u'kura@kura.io')
 
+Yarg in action
+--------------
+
+- `Yarg is used extensively on pypip.in
+  <https://github.com/badges/pypipins/blob/master/shields/shields.py>`_
+- `Yarg being used on djangopackages.com
+  <https://github.com/pydanny/djangopackages/issues/289>`_
+
 Yarg documentation
 ------------------
 
