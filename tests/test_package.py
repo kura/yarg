@@ -127,10 +127,10 @@ class TestPackageMissingData(unittest.TestCase):
         self.assertEquals(u'0.0.0', self.package.latest_release_id)
 
     def test_has_wheel(self):
-        self.assertEquals(True, self.package.has_wheel)
+        self.assertEquals(False, self.package.has_wheel)
 
     def test_has_egg(self):
-        self.assertEquals(False, self.package.has_egg)
+        self.assertEquals(True, self.package.has_egg)
 
     def test_has_source(self):
-        self.assertEquals(True, self.package.has_source)
+        self.assertEquals(False, self.package.has_source)
