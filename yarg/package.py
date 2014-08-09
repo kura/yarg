@@ -50,8 +50,6 @@ class Package(object):
     @property
     def name(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.name
             u'yarg'
@@ -61,8 +59,6 @@ class Package(object):
     @property
     def pypi_url(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.url
             u'https://pypi.python.org/pypi/yarg'
@@ -72,8 +68,6 @@ class Package(object):
     @property
     def summary(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.summary
             u'Some random summary stuff'
@@ -83,8 +77,6 @@ class Package(object):
     @property
     def description(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.description
             u'A super long description, usually upload from the README'
@@ -94,8 +86,6 @@ class Package(object):
     @property
     def homepage(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.homepage
             u'https://kura.io/yarg/'
@@ -108,8 +98,6 @@ class Package(object):
     @property
     def bugtracker(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.bugtracker
             u'https://github.com/kura/yarg/issues'
@@ -122,8 +110,6 @@ class Package(object):
     @property
     def docs(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.docs
             u'https://yarg.readthedocs.org/en/latest'
@@ -136,8 +122,6 @@ class Package(object):
     @property
     def author(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.author
             Author(name=u'Kura', email=u'kura@kura.io')
@@ -149,8 +133,6 @@ class Package(object):
     @property
     def maintainer(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.maintainer
             Maintainer(name=u'Kura', email=u'kura@kura.io')
@@ -162,8 +144,6 @@ class Package(object):
     @property
     def license(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.license
             u'MIT'
@@ -173,8 +153,6 @@ class Package(object):
     @property
     def license_from_classifiers(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.license_from_classifiers
             u'MIT License'
@@ -187,8 +165,6 @@ class Package(object):
     @property
     def downloads(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.downloads
             Downloads(day=50100, week=367941, month=1601938)  # I wish
@@ -202,8 +178,6 @@ class Package(object):
     @property
     def classifiers(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.classifiers
             [u'License :: OSI Approved :: MIT License',
@@ -217,8 +191,6 @@ class Package(object):
         """
         Returns a list of Python version strings that
         the package has listed in :attr:`yarg.Release.classifiers`.
-
-        Usage:
 
             >>> package = yarg.get('yarg')
             >>> package.python_versions
@@ -234,8 +206,6 @@ class Package(object):
         Returns a list of Python implementation strings that
         the package has listed in :attr:`yarg.Release.classifiers`.
 
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.python_implementations
             [u'CPython', u'PyPy']
@@ -246,8 +216,6 @@ class Package(object):
     @property
     def latest_release_id(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.latest_release_id
             u'0.1.0'
@@ -264,8 +232,6 @@ class Package(object):
         A list of :class:`yarg.release.Release` objects for each file in the
         latest release.
 
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.latest_release
             [<Release 0.1.0>, <Release 0.1.0>]
@@ -279,8 +245,6 @@ class Package(object):
         Returns `True` if one of the :class:`yarg.release.Release` objects
         in the latest set of release files is `wheel` format. Returns
         `False` if not.
-
-        Usage:
 
             >>> package = yarg.get('yarg')
             >>> package.has_wheel
@@ -298,8 +262,6 @@ class Package(object):
         in the latest set of release files is `egg` format. Returns
         `False` if not.
 
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.has_egg
             False
@@ -316,8 +278,6 @@ class Package(object):
         in the latest set of release files is `source` format. Returns
         `False` if not.
 
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.has_source
             True
@@ -330,8 +290,6 @@ class Package(object):
     @property
     def release_ids(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> package.release_ids
             [u'0.0.1', u'0.0.5', u'0.1.0']
@@ -345,8 +303,6 @@ class Package(object):
         release.
 
         :param release_id: A pypi release id.
-
-        Usage:
 
             >>> package = yarg.get('yarg')
             >>> last_release = yarg.releases[-1]

@@ -37,8 +37,6 @@ def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
     :param package_name: case sensitive name of the package on the PyPI server.
     :param pypi_server: (option) URL to the PyPI server.
 
-    Usage:
-
         >>> import yarg
         >>> package = yarg.get('yarg')
         <Package yarg>

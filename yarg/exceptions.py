@@ -37,6 +37,8 @@ class HTTPError(YargException, RHTTPError):
 
     This exception is also loaded at :class:`yarg.HTTPError`
     for ease of access.
+
+    :member: status_code
     """
 
     def __init__(self, *args, **kwargs):

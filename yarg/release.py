@@ -44,8 +44,6 @@ class Release(object):
     @property
     def release_id(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -57,8 +55,6 @@ class Release(object):
     @property
     def uploaded(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -71,8 +67,6 @@ class Release(object):
     @property
     def python_version(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -84,8 +78,6 @@ class Release(object):
     @property
     def url(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -97,8 +89,6 @@ class Release(object):
     @property
     def md5_digest(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -110,8 +100,6 @@ class Release(object):
     @property
     def filename(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -123,8 +111,6 @@ class Release(object):
     @property
     def size(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -136,8 +122,6 @@ class Release(object):
     @property
     def package_type(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)
@@ -154,8 +138,6 @@ class Release(object):
     @property
     def has_sig(self):
         """
-        Usage:
-
             >>> package = yarg.get('yarg')
             >>> v = "0.1.0"
             >>> r = package.release(v)

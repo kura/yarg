@@ -29,11 +29,18 @@ yarg(1) -- A semi hard Cornish cheese, also queries PyPI
 Yarg is a PyPI client.
 
     >>> import yarg
+    >>>
     >>> package = yarg.get("yarg")
     >>> package.name
     u'yarg'
     >>> package.author
     Author(name=u'Kura', email=u'kura@kura.io')
+    >>>
+    >>> yarg.newest_packages()
+    [<Package yarg>, <Package gray>, <Package ragy>]
+    >>>
+    >>> yarg.latest_updated_packages()
+    [<Package yarg>, <Package gray>, <Package ragy>]
 
 Full documentation is at <https://yarg.readthedocs.org>.
 """
@@ -42,7 +49,7 @@ Full documentation is at <https://yarg.readthedocs.org>.
 from .client import get
 from .exceptions import HTTPError
 from .package import json2package
-from .parse import newest_packages, latest_updated_packages
+from .parse import (newest_packages, latest_updated_packages)
 
 
 __all__ = ['get', 'HTTPError', 'json2package', 'newest_packages',
