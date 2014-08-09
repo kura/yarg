@@ -51,4 +51,6 @@ class HTTPError(YargException, RHTTPError):
         return self.__repr__()
 
     def __repr__(self):
-        return "{0} {1}".format(self.status_code, self.reason)
+        if hasattr(self, 'status_code') and hasattr(self, 'reason'):
+            return "<HTTPError {0} {1}>".format(self.status_code, self.reason)
+        return "<HTTPError>"
