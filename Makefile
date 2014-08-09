@@ -1,4 +1,4 @@
-.PHONY: clean coverage deps deps-docs deps-test docs flake8 install pypi test tox uninstall
+.PHONY: clean coverage deps deps-docs deps-test docs flake8 install pypi rtd test tox uninstall
 
 clean:
 	find . -name "*.pyc" -delete
@@ -25,11 +25,13 @@ flake8:
 install:
 	python setup.py install
 
-pypi:
+pypi: rtd
 	pip install -r requirements-pypi.txt
 	python setup.py register
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
+
+rtd:
 	curl -X POST https://readthedocs.org/build/yarg
 
 test:
