@@ -27,7 +27,7 @@ class BadResponse(object):
     reason = "Mocked"
 
 
-class TestClient(unittest.TestCase):
+class TestParse(unittest.TestCase):
 
     def setUp(self):
         self.newest = self.setup_newest()
