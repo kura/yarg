@@ -79,7 +79,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.description
-            u'A super long description, usually upload from the README'
+            u'A super long description, usually uploaded from the README'
         """
         return self._package['description']
 

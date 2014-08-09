@@ -7,9 +7,9 @@ Release History
 API changes
 ~~~~~~~~~~~
 
- - New :meth:`yarg.newest_packages` for querying new packages
+ - New method :meth:`yarg.newest_packages` for querying new packages
    from the PyPI RSS feed.
- - New :meth:`yarg.latest_updated_packages` for querying
+ - New method :meth:`yarg.latest_updated_packages` for querying
    the latest updated packages from the PyPI RSS feed.
 
 Other
