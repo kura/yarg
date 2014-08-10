@@ -17,7 +17,8 @@ class TestRelease(unittest.TestCase):
         self.package = json2package(open(package).read())
 
     def test_release_ids(self):
-        self.assertEquals([u'0.0.0', u'0.0.2'], self.package.release_ids)
+        self.assertEquals([u'0.0.0', u'0.0.2', u'0.0.15'],
+                          self.package.release_ids)
 
     def test_release(self):
         release_id = '0.0.2'
@@ -50,7 +51,7 @@ class TestRelease(unittest.TestCase):
     def test_release_uploaded(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        self.assertEquals(datetime.strptime("2014-07-21T19:41:20",
+        self.assertEquals(datetime.strptime("2014-08-16T12:21:20",
                                             "%Y-%m-%dT%H:%M:%S"),
                           release.uploaded)
 
@@ -99,17 +100,17 @@ class TestRelease(unittest.TestCase):
         self.assertEquals(True, release.has_sig)
 
     def test_latest_release_id(self):
-        self.assertEquals(u'0.0.2', self.package.latest_release_id)
+        self.assertEquals(u'0.0.15', self.package.latest_release_id)
 
     def test_latest_release(self):
-        release_id = '0.0.2'
+        release_id = '0.0.15'
         release = self.json['releases'][release_id]
         release_list = [Release(release_id, r) for r in release]
         self.assertEquals(release_list[0].md5_digest,
                           self.package.latest_release[0].md5_digest)
         self.assertEquals(release_list[1].md5_digest,
                           self.package.latest_release[1].md5_digest)
-        self.assertEquals('3e3098611177c34706de2e10476b3e50',
+        self.assertEquals('3e3098611177c34706de2e10476b3e51',
                           self.package.latest_release[0].md5_digest)
-        self.assertEquals('be198baa95116c1c9d17874428e3a0c6',
+        self.assertEquals('be198baa95116c1c9d17874428e3a0c7',
                           self.package.latest_release[1].md5_digest)

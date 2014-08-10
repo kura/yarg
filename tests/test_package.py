@@ -82,10 +82,11 @@ class TestPackage(unittest.TestCase):
                          self.package.classifiers)
 
     def test_release_ids(self):
-        self.assertEquals([u'0.0.0', u'0.0.2'], self.package.release_ids)
+        self.assertEquals([u'0.0.0', u'0.0.2', u'0.0.15'],
+                          self.package.release_ids)
 
     def test_latest_release_id(self):
-        self.assertEquals(u'0.0.2', self.package.latest_release_id)
+        self.assertEquals(u'0.0.15', self.package.latest_release_id)
 
     def test_has_wheel(self):
         self.assertEquals(True, self.package.has_wheel)

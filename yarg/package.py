@@ -291,8 +291,9 @@ class Package(object):
             >>> package.release_ids
             [u'0.0.1', u'0.0.5', u'0.1.0']
         """
-        r = [k for k in self._releases.keys() if len(self._releases[k]) > 0]
-        return sorted(r)
+        r = [(k, self._releases[k][0]['upload_time']) for k in self._releases.keys()
+                                                   if len(self._releases[k]) > 0]
+        return [k[0] for k in sorted(r, key=lambda k: k[1])]
 
     def release(self, release_id):
         """

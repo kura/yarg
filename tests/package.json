@@ -8,7 +8,7 @@
         "author_email": "kura@kura.io",
         "download_url": "https://github.com/kura/yarg/archive/0.0.0.tar.gz",
         "platform": "linux",
-        "version": "0.0.2",
+        "version": "0.0.15",
         "description": "This is the long description.",
         "release_url": "http://pypi.python.org/pypi/yarg/0.0.0",
         "downloads": {
@@ -40,51 +40,77 @@
         "0.0.0": [
             {
                 "has_sig": false,
-                "upload_time": "2014-08-16T12:21:20",
+                "upload_time": "2014-07-21T19:41:20",
                 "comment_text": "",
                 "python_version": "2.7",
                 "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.0-py2.py3-none-any.whl",
                 "md5_digest": "3e3098612677c34706de2e10476b3e50",
-                "downloads": 742,
+                "downloads": 749,
                 "filename": "yarg-0.0.0-py2.py3-none-any.whl",
                 "packagetype": "wheeeel",
                 "size": 21576
             },
             {
                 "has_sig": false,
-                "upload_time": "2014-08-16T12:21:49",
+                "upload_time": "2014-07-21T19:40:55",
                 "comment_text": "",
                 "python_version": "source",
                 "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.0.tar.gz",
                 "md5_digest": "be198baa95536c1c9d17874428e3a0c6",
-                "downloads": 824,
+                "downloads": 834,
                 "filename": "yarg-0.0.0.tar.gz",
                 "packagetype": "egg",
                 "size": 12377
             }
         ],
         "0.0.1": [],
+        "0.0.15": [
+            {
+                "has_sig": true,
+                "upload_time": "2014-08-17T12:21:20",
+                "comment_text": "",
+                "python_version": "2.7",
+                "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.15-py2.py3-none-any.whl",
+                "md5_digest": "3e3098611177c34706de2e10476b3e51",
+                "downloads": 742,
+                "filename": "yarg-0.0.15-py2.py3-none-any.whl",
+                "packagetype": "bdist_wheel",
+                "size": 21597
+            },
+            {
+                "has_sig": true,
+                "upload_time": "2014-08-17T12:21:49",
+                "comment_text": "",
+                "python_version": "source",
+                "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.15.tar.gz",
+                "md5_digest": "be198baa95116c1c9d17874428e3a0c7",
+                "downloads": 824,
+                "filename": "yarg-0.0.15.tar.gz",
+                "packagetype": "sdist",
+                "size": 12398
+            }
+        ],
         "0.0.2": [
             {
                 "has_sig": true,
-                "upload_time": "2014-07-21T19:41:20",
+                "upload_time": "2014-08-16T12:21:20",
                 "comment_text": "",
                 "python_version": "2.7",
                 "url": "https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl",
                 "md5_digest": "3e3098611177c34706de2e10476b3e50",
-                "downloads": 749,
+                "downloads": 742,
                 "filename": "yarg-0.0.2-py2.py3-none-any.whl",
                 "packagetype": "bdist_wheel",
                 "size": 21596
             },
             {
                 "has_sig": true,
-                "upload_time": "2014-07-21T19:40:55",
+                "upload_time": "2014-08-16T12:21:49",
                 "comment_text": "",
                 "python_version": "source",
                 "url": "https://pypi.python.org/packages/source/y/yarg/yarg-0.0.2.tar.gz",
                 "md5_digest": "be198baa95116c1c9d17874428e3a0c6",
-                "downloads": 834,
+                "downloads": 824,
                 "filename": "yarg-0.0.2.tar.gz",
                 "packagetype": "sdist",
                 "size": 12397

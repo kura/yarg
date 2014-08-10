@@ -56,7 +56,7 @@ __all__ = ['get', 'HTTPError', 'json2package', 'newest_packages',
            'latest_updated_packages', ]
 
 __title__ = 'yarg'
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 __author__ = 'Kura'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2014 Kura'
