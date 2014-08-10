@@ -1,6 +1,26 @@
 Release History
 ===============
 
+0.1.5 (2014-08-10)
+------------------
+
+API changes
+~~~~~~~~~~~
+
+- Changed sort order of :meth:`yarg.package.Package.release_ids` to sort
+  based on the upload time of the release ID.
+
+Splatting bugs
+~~~~~~~~~~~~~~
+
+- :meth:`yarg.package.Package.latest_release_id` will now return the latest
+  release ID from the PyPI info source, rather than the final list item in
+  :meth:`yarg.package.Package.release_ids`.
+
+  Addtionally :meth:`yarg.package.Package.latest_release` will do the same as
+  it gets the latest release information from
+  :meth:`yarg.package.Package.latest_release_id`.
+
 0.1.4 (2014-08-09)
 ------------------
 
