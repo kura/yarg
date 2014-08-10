@@ -3,16 +3,15 @@ from setuptools import setup
 from setuptools import find_packages
 import sys
 
-from yarg.__about__ import __version__ as version
-
 
 desc = "A semi hard Cornish cheese, also queries PyPI (PyPI client)"
 long_desc = open('README.rst').read() + "\n\n" + open('CHANGES.rst').read()
 long_desc = re.sub(r":[a-z]*:`", "`", long_desc)
 
+exec(open('yarg/__about__.py').read())
 
 setup(name='yarg',
-      version=version,
+      version=__version__,
       url="https://yarg.readthedocs.org/",
       author="Kura",
       author_email="kura@kura.io",
