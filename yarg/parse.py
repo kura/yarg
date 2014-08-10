@@ -44,7 +44,8 @@ def _get(pypi_server):
     return channel.findall('item')
 
 
-def newest_packages(pypi_server="https://pypi.python.org/pypi?%3Aaction=packages_rss"):
+def newest_packages(
+        pypi_server="https://pypi.python.org/pypi?%3Aaction=packages_rss"):
     """
     Constructs a request to the PyPI server and returns a list of
     :class:`yarg.parse.Package`.
@@ -66,7 +67,8 @@ def newest_packages(pypi_server="https://pypi.python.org/pypi?%3Aaction=packages
     return i
 
 
-def latest_updated_packages(pypi_server="https://pypi.python.org/pypi?%3Aaction=rss"):
+def latest_updated_packages(
+        pypi_server="https://pypi.python.org/pypi?%3Aaction=rss"):
     """
     Constructs a request to the PyPI server and returns a list of
     :class:`yarg.parse.Package`.

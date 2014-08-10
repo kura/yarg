@@ -9,7 +9,6 @@ Splatting bugs
 
 - Bug in setup.py causing installs to fail for sdist (source) releases.
 
-
 0.1.5 (2014-08-10)
 ------------------
 

@@ -90,8 +90,8 @@ class Package(object):
             >>> package.homepage
             u'https://kura.io/yarg/'
         """
-        if 'home_page' not in self._package or \
-        self._package['home_page'] == "":
+        if ('home_page' not in self._package or
+           self._package['home_page'] == ""):
             return None
         return self._package['home_page']
 
@@ -102,8 +102,8 @@ class Package(object):
             >>> package.bugtracker
             u'https://github.com/kura/yarg/issues'
         """
-        if 'bugtrack_url' not in self._package or \
-        self._package['bugtrack_url'] == "":
+        if ('bugtrack_url' not in self._package or
+           self._package['bugtrack_url'] == ""):
             return None
         return self._package['bugtrack_url']
 
@@ -114,8 +114,8 @@ class Package(object):
             >>> package.docs
             u'https://yarg.readthedocs.org/en/latest'
         """
-        if 'docs_url' not in self._package or \
-        self._package['docs_url'] == "":
+        if ('docs_url' not in self._package or
+           self._package['docs_url'] == ""):
             return None
         return self._package['docs_url']
 
@@ -196,7 +196,8 @@ class Package(object):
             >>> package.python_versions
             [u'2.6', u'2.7', u'3.3', u'3.4']
         """
-        version_re = re.compile(r"Programming Language \:\: Python \:\: \d\.\d")
+        version_re = re.compile(r"""Programming Language \:\: """\
+                                """Python \:\: \d\.\d""")
         return [c.split(' :: ')[-1] for c in self.classifiers
                 if version_re.match(c)]
 
@@ -211,7 +212,8 @@ class Package(object):
             [u'CPython', u'PyPy']
         """
         return [c.split(' :: ')[-1] for c in self.classifiers
-                if c.startswith('Programming Language :: Python :: Implementation')]
+                if c.startswith("""Programming Language :: """
+                                """Python :: Implementation""")]
 
     @property
     def latest_release_id(self):
@@ -220,7 +222,6 @@ class Package(object):
             >>> package.latest_release_id
             u'0.1.0'
         """
-        releases = self.release_ids
         return self._package['version']
 
     @property
@@ -291,8 +292,9 @@ class Package(object):
             >>> package.release_ids
             [u'0.0.1', u'0.0.5', u'0.1.0']
         """
-        r = [(k, self._releases[k][0]['upload_time']) for k in self._releases.keys()
-                                                   if len(self._releases[k]) > 0]
+        r = [(k, self._releases[k][0]['upload_time'])
+             for k in self._releases.keys()
+             if len(self._releases[k]) > 0]
         return [k[0] for k in sorted(r, key=lambda k: k[1])]
 
     def release(self, release_id):
