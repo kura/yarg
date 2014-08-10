@@ -48,4 +48,7 @@ def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
     if response.status_code >= 300:
         raise HTTPError(status_code=response.status_code,
                         reason=response.reason)
-    return json2package(response.content)
+    if hasattr(response.content, 'decode'):
+        return json2package(response.content.decode())
+    else:
+        return json2package(response.content)
