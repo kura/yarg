@@ -7,7 +7,7 @@ import sys
 version = __import__('yarg').__version__
 desc = "A semi hard Cornish cheese, also queries PyPI (PyPI client)"
 long_desc = open('README.rst').read() + "\n\n" + open('CHANGES.rst').read()
-long_desc = re.sub(r":[a-z]*:", "", long_desc)
+long_desc = re.sub(r":[a-z]*:`", "`", long_desc)
 
 
 setup(name='yarg',
