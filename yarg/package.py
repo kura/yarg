@@ -196,7 +196,7 @@ class Package(object):
             >>> package.python_versions
             [u'2.6', u'2.7', u'3.3', u'3.4']
         """
-        version_re = re.compile(r"""Programming Language \:\: """\
+        version_re = re.compile(r"""Programming Language \:\: """
                                 """Python \:\: \d\.\d""")
         return [c.split(' :: ')[-1] for c in self.classifiers
                 if version_re.match(c)]
