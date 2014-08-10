@@ -16,7 +16,7 @@ import datetime
 import os
 import sys
 
-from yarg import __version__
+from yarg.__about__ import __version__
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
