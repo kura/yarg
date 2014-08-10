@@ -1,6 +1,15 @@
 Release History
 ===============
 
+0.1.8 (2014-08-10)
+------------------
+
+Splatting bugs
+~~~~~~~~~~~~~~
+
+- Integration issue with Python 3, requests, yarg and JSON. Attempt to decode
+  requests response if decode attribute exists.
+
 0.1.6 & 0.1.7 (2014-08-10)
 --------------------------
 
