@@ -8,7 +8,7 @@
         "author_email": "kura@kura.io",
         "download_url": "https://github.com/kura/yarg/archive/0.0.0.tar.gz",
         "platform": "linux",
-        "version": "0.0.0",
+        "version": "0.0.2",
         "description": "This is the long description.",
         "release_url": "http://pypi.python.org/pypi/yarg/0.0.0",
         "downloads": {

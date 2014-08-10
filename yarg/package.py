@@ -221,10 +221,7 @@ class Package(object):
             u'0.1.0'
         """
         releases = self.release_ids
-        if len(releases) == 1:
-            return releases[0]
-        else:
-            return releases[-1]
+        return self._package['version']
 
     @property
     def latest_release(self):
