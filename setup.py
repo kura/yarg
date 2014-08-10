@@ -3,8 +3,9 @@ from setuptools import setup
 from setuptools import find_packages
 import sys
 
+from yarg.__about__ import __version__ as version
 
-version = __import__('yarg').__version__
+
 desc = "A semi hard Cornish cheese, also queries PyPI (PyPI client)"
 long_desc = open('README.rst').read() + "\n\n" + open('CHANGES.rst').read()
 long_desc = re.sub(r":[a-z]*:`", "`", long_desc)
