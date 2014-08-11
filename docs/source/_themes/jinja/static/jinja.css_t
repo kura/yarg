@@ -11,7 +11,7 @@
 {% set font_family = 'FiraSans, Georgia, serif' %}
 {% set header_font_family = 'FiraSans, Georgia, serif' %}
 
-@import url("basic.css");
+@import url("https://yarg.readthedocs.org/_static/basic.css");
 
 @font-face {
   font-family: 'FiraSans';
