@@ -1,6 +1,15 @@
 Release History
 ===============
 
+0.1.9 (2014-08-11)
+------------------
+
+Splatting bugs
+~~~~~~~~~~~~~~
+
+- Added `decode` call on the response object for Python 3 in
+  :meth:`yarg.newest_packages` and :meth:`yarg.latest_updated_packages`.
+
 0.1.8 (2014-08-10)
 ------------------
 
