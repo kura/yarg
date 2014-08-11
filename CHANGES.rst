@@ -86,8 +86,10 @@ API changes
 - New :class:`yarg.package.Package` property `has_source`.
 - New :class:`yarg.package.Package` property `python_versions`.
 - New :class:`yarg.package.Package` property `python_implementations`.
-- Added :class:`yarg.exceptions.HTTPError` to :mod:`yarg.__init__` for easier access.
-- Added :meth:`yarg.json2package` to :mod:`yarg.__init__` to expose it for use.
+- Added :class:`yarg.exceptions.HTTPError` to :mod:`yarg.__init__`
+  for easier access.
+- Added :meth:`yarg.json2package` to :mod:`yarg.__init__` to expose it for
+  use.
 
 0.1.0 (2014-08-08)
 ------------------

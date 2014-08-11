@@ -119,7 +119,7 @@ class TestParse(unittest.TestCase):
     def test_newest_package_version(self, get_mock):
         p = newest_packages()
         self.assertEqual(call('https://pypi.python.org/pypi?%3Aaction=packages_rss'),
-                get_mock.call_args)
+                         get_mock.call_args)
         self.assertEqual(None, p[0].version)
 
     @patch('requests.get', return_value=GoodUpdatedResponse)
