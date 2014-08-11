@@ -39,7 +39,10 @@ def _get(pypi_server):
     if response.status_code >= 300:
         raise HTTPError(status_code=response.status_code,
                         reason=response.reason)
-    tree = xml.etree.ElementTree.fromstring(response.content)
+    if hasattr(response.content, 'decode'):
+        tree = xml.etree.ElementTree.fromstring(response.content.decode())
+    else:
+        tree = xml.etree.ElementTree.fromstring(response.content)
     channel = tree.find('channel')
     return channel.findall('item')
 
