@@ -6,6 +6,9 @@ python:
   - "3.4"
   - "pypy"
   - "pypy3"
+os:
+  - linux
+  - osx
 install:
   - make deps
   - make deps-test
