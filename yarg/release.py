@@ -48,7 +48,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r[0].release_id
-            u'0.1.0'
+            '0.1.0'
         """
         return self._release['release_id']
 
@@ -71,7 +71,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.python_version
-            u'2.7'
+            '2.7'
         """
         return self._release['python_version']
 
@@ -82,7 +82,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.url
-            u'https://pypi.python.org/packages/2.7/y/yarg/yarg...'
+            'https://pypi.python.org/packages/2.7/y/yarg/yarg...'
         """
         return self._release['url']
 
@@ -93,7 +93,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.md5_digest
-            u'bec88e1c1765ca6177360e8f37b44c5c'
+            'bec88e1c1765ca6177360e8f37b44c5c'
         """
         return self._release['md5_digest']
 
@@ -104,7 +104,7 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.filename
-            u'yarg-0.1.0-py27-none-any.whl'
+            'yarg-0.1.0-py27-none-any.whl'
         """
         return self._release['filename']
 
@@ -126,10 +126,10 @@ class Release(object):
             >>> v = "0.1.0"
             >>> r = package.release(v)
             >>> r.package_type
-            u'wheel'
+            'wheel'
         """
-        mapping = {'bdist_egg': u'egg', 'bdist_wheel': u'wheel',
-                   'sdist': u'source'}
+        mapping = {'bdist_egg': 'egg', 'bdist_wheel': 'wheel',
+                   'sdist': 'source'}
         ptype = self._release['packagetype']
         if ptype in mapping.keys():
             return mapping[ptype]

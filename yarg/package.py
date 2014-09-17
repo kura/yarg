@@ -52,7 +52,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.name
-            u'yarg'
+            'yarg'
         """
         return self._package['name']
 
@@ -61,7 +61,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.url
-            u'https://pypi.python.org/pypi/yarg'
+            'https://pypi.python.org/pypi/yarg'
         """
         return self._package['package_url']
 
@@ -70,7 +70,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.summary
-            u'Some random summary stuff'
+            'Some random summary stuff'
         """
         return self._package['summary']
 
@@ -79,7 +79,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.description
-            u'A super long description, usually uploaded from the README'
+            'A super long description, usually uploaded from the README'
         """
         return self._package['description']
 
@@ -88,7 +88,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.homepage
-            u'https://kura.io/yarg/'
+            'https://kura.io/yarg/'
         """
         if ('home_page' not in self._package or
            self._package['home_page'] == ""):
@@ -100,7 +100,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.bugtracker
-            u'https://github.com/kura/yarg/issues'
+            'https://github.com/kura/yarg/issues'
         """
         if ('bugtrack_url' not in self._package or
            self._package['bugtrack_url'] == ""):
@@ -112,7 +112,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.docs
-            u'https://yarg.readthedocs.org/en/latest'
+            'https://yarg.readthedocs.org/en/latest'
         """
         if ('docs_url' not in self._package or
            self._package['docs_url'] == ""):
@@ -124,7 +124,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.author
-            Author(name=u'Kura', email=u'kura@kura.io')
+            Author(name='Kura', email='kura@kura.io')
         """
         author = namedtuple('Author', 'name email')
         return author(name=self._package['author'],
@@ -135,7 +135,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.maintainer
-            Maintainer(name=u'Kura', email=u'kura@kura.io')
+            Maintainer(name='Kura', email='kura@kura.io')
         """
         maintainer = namedtuple('Maintainer', 'name email')
         return maintainer(name=self._package['maintainer'],
@@ -146,7 +146,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.license
-            u'MIT'
+            'MIT'
         """
         return self._package['license']
 
@@ -155,7 +155,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.license_from_classifiers
-            u'MIT License'
+            'MIT License'
         """
         if len(self.classifiers) > 0:
             for c in self.classifiers:
@@ -180,9 +180,9 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.classifiers
-            [u'License :: OSI Approved :: MIT License',
-             u'Programming Language :: Python :: 2.7',
-             u'Programming Language :: Python :: 3.4']
+            ['License :: OSI Approved :: MIT License',
+             'Programming Language :: Python :: 2.7',
+             'Programming Language :: Python :: 3.4']
         """
         return self._package['classifiers']
 
@@ -194,7 +194,7 @@ class Package(object):
 
             >>> package = yarg.get('yarg')
             >>> package.python_versions
-            [u'2.6', u'2.7', u'3.3', u'3.4']
+            ['2.6', '2.7', '3.3', '3.4']
         """
         version_re = re.compile(r"""Programming Language \:\: """
                                 """Python \:\: \d\.\d""")
@@ -209,7 +209,7 @@ class Package(object):
 
             >>> package = yarg.get('yarg')
             >>> package.python_implementations
-            [u'CPython', u'PyPy']
+            ['CPython', 'PyPy']
         """
         return [c.split(' :: ')[-1] for c in self.classifiers
                 if c.startswith("""Programming Language :: """
@@ -220,7 +220,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.latest_release_id
-            u'0.1.0'
+            '0.1.0'
         """
         return self._package['version']
 
@@ -290,7 +290,7 @@ class Package(object):
         """
             >>> package = yarg.get('yarg')
             >>> package.release_ids
-            [u'0.0.1', u'0.0.5', u'0.1.0']
+            ['0.0.1', '0.0.5', '0.1.0']
         """
         r = [(k, self._releases[k][0]['upload_time'])
              for k in self._releases.keys()

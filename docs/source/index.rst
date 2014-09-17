@@ -31,9 +31,9 @@ easy to use and makes sense.
     >>> import yarg
     >>> package = yarg.get("yarg")
     >>> package.name
-    u'yarg'
+    'yarg'
     >>> package.author
-    Author(name=u'Kura', email=u'kura@kura.io')
+    Author(name='Kura', email='kura@kura.io')
 
 Yarg is released under the `MIT license
 <https://github.com/kura/yarg/blob/master/LICENSE>`_. The `source code is on

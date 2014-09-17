@@ -113,10 +113,10 @@ class Package(object):
         """
             >>> package = yarg.newest_packages()[0]
             >>> package.name
-            u'yarg'
+            'yarg'
             >>> package = yarg.latest_updated_packages()[0]
             >>> package.name
-            u'yarg'
+            'yarg'
         """
         return self._content['name']
 
@@ -125,10 +125,10 @@ class Package(object):
         """
             >>> package = yarg.newest_packages()[0]
             >>> package.name
-            u'yarg'
+            'yarg'
             >>> package = yarg.latest_updated_packages()[0]
             >>> package.name
-            u'yarg'
+            'yarg'
         """
         if 'version' not in self._content:
             return None
@@ -142,7 +142,7 @@ class Package(object):
 
             >>> package = yarg.latest_updated_packages()[0]
             >>> package.url
-            u'http://pypi.python.org/pypi/yarg'
+            'http://pypi.python.org/pypi/yarg'
         """
         return self._content['url']
 
@@ -164,9 +164,9 @@ class Package(object):
         """
             >>> package = yarg.newest_packages()[0]
             >>> package.description
-            u'Some random summary stuff'
+            'Some random summary stuff'
             >>> package = yarg.latest_updated_packages()[0]
             >>> package.description
-            u'Some random summary stuff'
+            'Some random summary stuff'
         """
         return self._content['description']

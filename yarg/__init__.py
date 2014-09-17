@@ -32,9 +32,9 @@ Yarg is a PyPI client.
     >>>
     >>> package = yarg.get("yarg")
     >>> package.name
-    u'yarg'
+    'yarg'
     >>> package.author
-    Author(name=u'Kura', email=u'kura@kura.io')
+    Author(name='Kura', email='kura@kura.io')
     >>>
     >>> yarg.newest_packages()
     [<Package yarg>, <Package gray>, <Package ragy>]
