@@ -57,6 +57,7 @@ Yarg documentation
    intro
    api-search
    api-rss
+   testing
 
 Changelog
 ---------
@@ -72,7 +73,7 @@ Contributors
 .. toctree::
     :maxdepth: 2
 
-    contributors.rst
+    contributors
 
 Help
 ----

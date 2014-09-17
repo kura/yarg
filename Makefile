@@ -34,7 +34,7 @@ pypi: rtd
 rtd:
 	curl -X POST https://readthedocs.org/build/yarg
 
-test:
+test: deps deps-test
 	nosetests --processes=$(shell grep -c ^processor /proc/cpuinfo 2>/dev/null || sysctl -n hw.ncpu) --with-progressive
 
 tox: deps deps-test
