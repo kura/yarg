@@ -20,7 +20,7 @@ docs: deps-docs
 
 flake8:
 	pip install flake8
-	flake8 yarg
+	flake8 yarg  --show-source
 
 install:
 	python setup.py install
