@@ -20,7 +20,7 @@ class BadResponse(object):
 
 class TestClient(unittest.TestCase):
 
-    @patch('requests.get', return_value=BadResponse)
+    @patch('requests.Session.get', return_value=BadResponse)
     def test_get(self, get_mock):
         # Python 2.6....
         try:
@@ -30,7 +30,7 @@ class TestClient(unittest.TestCase):
             self.assertEqual(e.status_code, e.errno)
             self.assertEqual(e.reason, e.message)
 
-    @patch('requests.get', return_value=GoodResponse)
+    @patch('requests.Session.get', return_value=GoodResponse)
     def test_end_slash(self, get_mock):
         get("test", pypi_server="https://mock.test.mock/test")
         self.assertEqual(call('https://mock.test.mock/test/test/json'),
