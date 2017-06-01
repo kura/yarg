@@ -29,11 +29,12 @@ from .exceptions import HTTPError
 from .package import json2package
 
 
-_session = None
+session = requests.Session()
+
 
 def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
     """
-    Constructs a request to the PyPI server and returns a
+    Construct a request to the PyPI server and returns an instance of
     :class:`yarg.package.Package`.
 
     :param package_name: case sensitive name of the package on the PyPI server.
@@ -43,14 +44,10 @@ def get(package_name, pypi_server="https://pypi.python.org/pypi/"):
         >>> package = yarg.get('yarg')
         <Package yarg>
     """
-    global _session
-    if _session is None:
-        _session = requests.Session()
-
     if not pypi_server.endswith("/"):
         pypi_server = pypi_server + "/"
-    response = _session.get("{0}{1}/json".format(pypi_server,
-                                                 package_name))
+    response = session.get("{0}{1}/json".format(pypi_server,
+                                                package_name))
     if response.status_code >= 300:
         raise HTTPError(status_code=response.status_code,
                         reason=response.reason)
