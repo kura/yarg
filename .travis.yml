@@ -1,14 +1,19 @@
 language: python
+cache: pip
 python:
   - "2.6"
   - "2.7"
   - "3.3"
   - "3.4"
+  - "3.5"
+  - "3.6"
   - "pypy"
   - "pypy3"
 os:
   - linux
   - osx
+dist: trusty
+sudo: false
 install:
   - make deps
   - make deps-test
