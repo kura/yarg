@@ -8,9 +8,6 @@ python:
   - "3.6"
   - "pypy"
   - "pypy3"
-os:
-  - linux
-  - osx
 dist: trusty
 sudo: false
 install:
