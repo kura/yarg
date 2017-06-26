@@ -9,7 +9,7 @@ python:
   - "pypy"
   - "pypy3"
 dist: trusty
-sudo: true
+sudo: false
 group: edge
 install:
   - make deps
