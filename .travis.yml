@@ -10,6 +10,7 @@ python:
   - "pypy3"
 dist: trusty
 sudo: false
+group: edge
 install:
   - make deps
   - make deps-test
