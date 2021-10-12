@@ -2,7 +2,7 @@ from datetime import datetime
 import os
 import unittest
 
-from mock import call, MagicMock, patch
+from unittest.mock import call, MagicMock, patch
 
 from yarg import newest_packages, latest_updated_packages, HTTPError
 from yarg.parse import _get, Package

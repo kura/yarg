@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from mock import call, MagicMock, patch
+from unittest.mock import call, MagicMock, patch
 
 from yarg import get, HTTPError
 
