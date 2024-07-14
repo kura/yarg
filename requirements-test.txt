@@ -1,4 +1,2 @@
-nose
-nose-progressive
+pytest
 coveralls
-

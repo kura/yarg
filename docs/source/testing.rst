@@ -1,7 +1,7 @@
 Testing
 =======
 
-Yarg uses the built-in `unittest` framework for Python and uses `nose` as the
+Yarg uses the built-in `unittest` framework for Python and uses `pytest` as the
 test rig.
 
 Running the tests using the Makefile
@@ -20,7 +20,7 @@ Running the tests without using the Makefile
 .. code-block:: bash
 
     pip install -r requirements-test.txt
-    nosetests --processes=$(shell grep -c ^processor /proc/cpuinfo 2>/dev/null || sysctl -n hw.ncpu) --with-progressive
+    pytest
 
 Running the tests with tox/detox
 --------------------------------
