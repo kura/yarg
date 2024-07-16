@@ -4,7 +4,7 @@ clean:
 	find . -name "*.pyc" -delete
 
 coverage: deps-test
-	coverage run --source=yarg runtests.py
+	coverage run -m pytest
 
 deps:
 	pip install -r requirements.txt
@@ -35,7 +35,7 @@ rtd:
 	curl -X POST https://readthedocs.org/build/yarg
 
 test: deps deps-test
-	nosetests --processes=$(shell grep -c ^processor /proc/cpuinfo 2>/dev/null || sysctl -n hw.ncpu) --with-progressive
+	pytest
 
 tox: deps deps-test
 	detox
