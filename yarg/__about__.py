@@ -1,5 +1,5 @@
 __title__ = 'yarg'
-__version__ = '0.1.9'
+__version__ = '0.1.10'
 __author__ = 'Kura'
 __email__ = 'kura@kura.io'
 __url__ = 'https://yarg.readthedocs.org/'
