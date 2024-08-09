@@ -95,7 +95,7 @@ def latest_updated_packages(
     return i
 
 
-class Package(object):
+class Package:
     """
     A PyPI package generated from the RSS feed information.
 

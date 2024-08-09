@@ -8,21 +8,21 @@ from yarg import newest_packages, latest_updated_packages, HTTPError
 from yarg.parse import _get, Package
 
 
-class GoodNewestResponse(object):
+class GoodNewestResponse:
     status_code = 200
     xml = os.path.join(os.path.dirname(__file__),
                            'newest.xml')
     content = open(xml).read()
 
 
-class GoodUpdatedResponse(object):
+class GoodUpdatedResponse:
     status_code = 200
     xml = os.path.join(os.path.dirname(__file__),
                            'updated.xml')
     content = open(xml).read()
 
 
-class BadResponse(object):
+class BadResponse:
     status_code = 300
     reason = "Mocked"
 

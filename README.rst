@@ -12,9 +12,9 @@ Yarg is a PyPI client.
     >>> import yarg
     >>> package = yarg.get("yarg")
     >>> package.name
-    u'yarg'
+    'yarg'
     >>> package.author
-    Author(name=u'Kura', email=u'kura@kura.io')
+    Author(name='Kura', email='kura@kura.io')
 
 Full documentation is at <https://yarg.readthedocs.org>.
 

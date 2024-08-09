@@ -35,7 +35,7 @@ the URL to your pythonhosted docs.
 .. code-block:: python
 
     >>> yarg.get('yarg').docs
-    u'http://pythonhosted.org//yarg'
+    'http://pythonhosted.org//yarg'
 
 Why is my `bugtracker` url empty?
 ---------------------------------
