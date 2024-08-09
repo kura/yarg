@@ -16,7 +16,7 @@ class TestRelease(unittest.TestCase):
         self.package = json2package(open(package).read())
 
     def test_release_ids(self):
-        self.assertEqual([u'0.0.0', u'0.0.2', u'0.0.15'],
+        self.assertEqual(['0.0.0', '0.0.2', '0.0.15'],
                           self.package.release_ids)
 
     def test_release(self):
@@ -35,7 +35,7 @@ class TestRelease(unittest.TestCase):
     def test_repr(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        self.assertEqual(u'<Release 0.0.2>', release.__repr__())
+        self.assertEqual('<Release 0.0.2>', release.__repr__())
 
     def test_release_id(self):
         release_id = '0.0.2'
@@ -57,24 +57,24 @@ class TestRelease(unittest.TestCase):
     def test_release_python_version(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        self.assertEqual(u'2.7', release.python_version)
+        self.assertEqual('2.7', release.python_version)
 
     def test_release_url(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        url = u'https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl'
+        url = 'https://pypi.python.org/packages/2.7/y/yarg/yarg-0.0.2-py2.py3-none-any.whl'
         self.assertEqual(url, release.url)
 
     def test_release_md5(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        md5 = u'3e3098611177c34706de2e10476b3e50'
+        md5 = '3e3098611177c34706de2e10476b3e50'
         self.assertEqual(md5, release.md5_digest)
 
     def test_release_filename(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        filename = u'yarg-0.0.2-py2.py3-none-any.whl'
+        filename = 'yarg-0.0.2-py2.py3-none-any.whl'
         self.assertEqual(filename, release.filename)
 
     def test_release_size(self):
@@ -86,12 +86,12 @@ class TestRelease(unittest.TestCase):
     def test_release_unknown_package_type(self):
         release_id = '0.0.0'
         release = self.package.release(release_id)[0]
-        self.assertEqual(u'wheeeel', release.package_type)
+        self.assertEqual('wheeeel', release.package_type)
 
     def test_release_package_type(self):
         release_id = '0.0.2'
         release = self.package.release(release_id)[0]
-        self.assertEqual(u'wheel', release.package_type)
+        self.assertEqual('wheel', release.package_type)
 
     def test_release_has_sig(self):
         release_id = '0.0.2'
@@ -99,7 +99,7 @@ class TestRelease(unittest.TestCase):
         self.assertEqual(True, release.has_sig)
 
     def test_latest_release_id(self):
-        self.assertEqual(u'0.0.15', self.package.latest_release_id)
+        self.assertEqual('0.0.15', self.package.latest_release_id)
 
     def test_latest_release(self):
         release_id = '0.0.15'

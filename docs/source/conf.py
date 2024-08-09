@@ -52,8 +52,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'yarg'
-copyright = u'{0}, Kura'.format(datetime.datetime.now().year)
+project = 'yarg'
+copyright = '{0}, Kura'.format(datetime.datetime.now().year)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -207,8 +207,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'yarg.tex', u'yarg Documentation',
-   u'Kura', 'manual'),
+  ('index', 'yarg.tex', 'yarg Documentation',
+   'Kura', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -237,8 +237,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'yarg', u'yarg Documentation',
-     [u'Kura'], 1)
+    ('index', 'yarg', 'yarg Documentation',
+     ['Kura'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -251,8 +251,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'yarg', u'yarg Documentation',
-   u'Kura', 'yarg', 'One line description of project.',
+  ('index', 'yarg', 'yarg Documentation',
+   'Kura', 'yarg', 'One line description of project.',
    'Miscellaneous'),
 ]
 
