@@ -26,7 +26,7 @@
 from datetime import datetime
 
 
-class Release(object):
+class Release:
     """
     A release file from PyPI.
 

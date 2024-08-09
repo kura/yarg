@@ -6,14 +6,14 @@ from unittest.mock import call, MagicMock, patch
 from yarg import get, HTTPError
 
 
-class GoodResponse(object):
+class GoodResponse:
     status_code = 200
     package = os.path.join(os.path.dirname(__file__),
                            'package.json')
     content = open(package).read()
 
 
-class BadResponse(object):
+class BadResponse:
     status_code = 300
     reason = "Mocked"
 

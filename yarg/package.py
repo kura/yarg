@@ -33,7 +33,7 @@ import re
 from .release import Release
 
 
-class Package(object):
+class Package:
     """
     A PyPI package.
 
